@@ -262,7 +262,7 @@ export default function AdminDashboard() {
                 </div>
               ) : (
                 <div className="space-y-4">
-                  {recentActivity.map((activity, index) => (
+                  {recentActivity.map((activity) => (
                     <div 
                       key={activity.id} 
                       className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10"

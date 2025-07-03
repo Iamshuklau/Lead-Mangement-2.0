@@ -12,7 +12,7 @@ export default async function Dashboard() {
     return redirect('/')
   }
 
-  const { data: profile, error } = await supabase
+  const { data: profile } = await supabase
     .from('profiles')
     .select('role')
     .eq('id', user.id)

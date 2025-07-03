@@ -38,10 +38,10 @@ export async function GET() {
       }
       acc[setting.category][setting.setting_key] = setting.setting_value
       return acc
-    }, {} as Record<string, Record<string, any>>)
+    }, {} as Record<string, Record<string, string>>)
 
     return NextResponse.json({ settings: groupedSettings })
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
@@ -88,7 +88,7 @@ export async function POST(request: Request) {
     await Promise.all(updatePromises)
 
     return NextResponse.json({ message: 'Settings updated successfully' })
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 } 

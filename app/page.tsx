@@ -32,7 +32,7 @@ export default function Login() {
           
           <div className="mt-6 text-center">
             <p className="text-gray-500 text-sm">
-              Don't have an account? <a href="#" className="text-gray-900 font-medium">Contact Admin</a>
+              Don&apos;t have an account? <a href="#" className="text-gray-900 font-medium">Contact Admin</a>
             </p>
           </div>
         </div>
