@@ -53,13 +53,6 @@ export function LoginForm() {
         </div>
       </div>
 
-      {/* Forgot password link */}
-      <div className="text-right">
-        <a href="#" className="text-sm text-gray-600 hover:text-gray-900 font-medium">
-          Forgot password?
-        </a>
-      </div>
-
       {/* Error message */}
       {state.error && (
         <div className="bg-red-50 border border-red-200 rounded-lg p-3">
@@ -82,15 +75,6 @@ export function LoginForm() {
           "Get Started"
         )}
       </Button>
-
-      {/* Demo credentials info */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <h4 className="text-gray-900 font-medium text-sm mb-2">Demo Credentials:</h4>
-        <div className="text-gray-700 text-xs space-y-1">
-          <p><span className="font-medium">Admin:</span> admin@ritm.edu.in / 12345678</p>
-          <p><span className="font-medium">Staff:</span> staff1@ritm.edu.in / 12345678</p>
-        </div>
-      </div>
     </form>
   )
 }
