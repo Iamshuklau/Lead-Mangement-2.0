@@ -3,12 +3,20 @@ import { LoginForm } from "@/components/login-form"
 
 export default function Login() {
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-4" 
-         style={{ backgroundImage: 'url(/login-bg.jpg)' }}>
-      {/* Main login card and note */}
-      <div className="flex flex-col md:flex-row items-center gap-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 flex items-center justify-center p-4 relative overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-300/30 via-purple-300/30 to-pink-300/30 animate-pulse"></div>
+      
+      {/* Floating shapes for visual interest */}
+      <div className="absolute top-20 left-20 w-32 h-32 bg-white/20 rounded-full blur-xl floating-shapes"></div>
+      <div className="absolute bottom-20 right-20 w-48 h-48 bg-purple-300/20 rounded-full blur-xl floating-shapes"></div>
+      <div className="absolute top-1/2 left-10 w-24 h-24 bg-pink-300/20 rounded-full blur-xl floating-shapes"></div>
+      
+      {/* Main content */}
+      <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 max-w-6xl mx-auto">
+        {/* Login card */}
         <div className="w-full max-w-md">
-          <div className="bg-white rounded-3xl p-8 shadow-xl">
+          <div className="login-card bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20">
             {/* Header */}
             <div className="flex items-center justify-between mb-8">
               <div>
@@ -23,8 +31,8 @@ export default function Login() {
             </div>
 
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Sign in with email</h2>
-              <p className="text-gray-600">
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">Sign in with email</h2>
+              <p className="text-gray-600 text-center leading-relaxed">
                 Access your dashboard to manage visitors and track activity.
               </p>
             </div>
@@ -33,23 +41,30 @@ export default function Login() {
             
             <div className="mt-6 text-center">
               <p className="text-gray-500 text-sm">
-                Don&apos;t have an account? <a href="#" className="text-gray-900 font-medium">Contact Admin</a>
+                Don&apos;t have an account? <button className="text-gray-900 font-medium hover:underline">Contact Admin</button>
               </p>
             </div>
           </div>
         </div>
-        {/* Note with credentials */}
-        <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 shadow-md text-sm text-gray-700 max-w-xs w-full">
-          <h4 className="font-semibold text-gray-900 mb-2">Test Credentials</h4>
-          <div className="mb-2">
-            <span className="font-medium">Admin:</span><br/>
-            Email: <span className="font-mono">admin@ritm.edu.in</span><br/>
-            Password: <span className="font-mono">password123</span>
-          </div>
-          <div>
-            <span className="font-medium">Staff:</span><br/>
-            Email: <span className="font-mono">staff@ritm.edu.in</span><br/>
-            Password: <span className="font-mono">password123</span>
+        
+        {/* Credentials card */}
+        <div className="bg-white/90 backdrop-blur-sm border border-white/30 rounded-2xl p-6 shadow-xl text-sm text-gray-700 max-w-xs w-full">
+          <h4 className="font-semibold text-gray-900 mb-3">Test Credentials</h4>
+          <div className="space-y-3">
+            <div className="bg-gray-50 rounded-lg p-3">
+              <span className="font-medium text-gray-900">Admin:</span>
+              <div className="mt-1 text-xs">
+                <div><span className="text-gray-600">Email:</span> <span className="font-mono text-gray-800">admin@ritm.edu.in</span></div>
+                <div><span className="text-gray-600">Password:</span> <span className="font-mono text-gray-800">password123</span></div>
+              </div>
+            </div>
+            <div className="bg-gray-50 rounded-lg p-3">
+              <span className="font-medium text-gray-900">Staff:</span>
+              <div className="mt-1 text-xs">
+                <div><span className="text-gray-600">Email:</span> <span className="font-mono text-gray-800">staff@ritm.edu.in</span></div>
+                <div><span className="text-gray-600">Password:</span> <span className="font-mono text-gray-800">password123</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

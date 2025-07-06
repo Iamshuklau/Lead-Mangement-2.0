@@ -24,7 +24,7 @@ export function LoginForm() {
               placeholder="Email"
               required
               disabled={pending}
-              className="h-14 text-base border-gray-200 bg-gray-50 rounded-xl px-4 placeholder:text-gray-500 focus:border-gray-400 focus:bg-white"
+              className="h-14 text-base border-gray-200 bg-gray-50/50 rounded-xl px-4 placeholder:text-gray-500 focus:border-gray-300 focus:bg-white focus:ring-2 focus:ring-gray-200/50 transition-all duration-200"
             />
           </div>
         </div>
@@ -39,7 +39,7 @@ export function LoginForm() {
               placeholder="Password"
               required
               disabled={pending}
-              className="h-14 text-base border-gray-200 bg-gray-50 rounded-xl px-4 pr-12 placeholder:text-gray-500 focus:border-gray-400 focus:bg-white"
+              className="h-14 text-base border-gray-200 bg-gray-50/50 rounded-xl px-4 pr-12 placeholder:text-gray-500 focus:border-gray-300 focus:bg-white focus:ring-2 focus:ring-gray-200/50 transition-all duration-200"
             />
             <button
               type="button"
@@ -55,7 +55,7 @@ export function LoginForm() {
 
       {/* Error message */}
       {state.error && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4">
           <p className="text-red-600 text-sm">{state.error}</p>
         </div>
       )}
@@ -64,7 +64,7 @@ export function LoginForm() {
       <Button
         type="submit"
         disabled={pending}
-        className="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-4 h-14 rounded-xl text-base disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-4 h-14 rounded-xl text-base disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
       >
         {pending ? (
           <div className="flex items-center justify-center gap-2">
